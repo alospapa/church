@@ -1,0 +1,139 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 10vh 5vh 70vh 20vh min-content 20vw repeat(2, min-content);
+  grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
+.team {
+  grid-column: center-start / center-end;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(6, min-content);
+  grid-gap: 6rem; }
+  .team__logo {
+    height: 30rem;
+    width: 25rem; }
+  .team-member__name {
+    font-size: 2rem;
+    text-align: center; }
+  .team-member__title {
+    font-size: 1.3rem;
+    text-align: center; }
+
+.team-heading {
+  grid-column: full-start / full-end;
+  text-align: center;
+  padding: 4rem 0; }
+
+.footer {
+  background-color: #101d2c;
+  grid-column: full-start / full-end;
+  padding: 8rem; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.05); }
+
+.header {
+  position: relative;
+  grid-column: full-start / full-end; }
+
+.menu {
+  background-color: #eee;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center; }
+  .menu__link {
+    font-size: 2rem;
+    border-right: black;
+    border-right-width: thick; }
+
+.top-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-column: center-start / center-end; }
+  .top-menu__logo {
+    height: 8.5rem;
+    width: 20rem; }
+
+.gallery {
+  background-color: greenyellow;
+  grid-column: full-start / full-end; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
+.heading-1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 4.5rem;
+  color: black;
+  line-height: 1; }
+
+.btn {
+  background-color: #A12529;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.8rem;
+  cursor: pointer;
+  transition: all .2s; }
+  .btn:hover {
+    background-color: red; }
+
+.prayer {
+  background-color: #A12529;
+  grid-column: full-start/full-end;
+  display: grid;
+  align-items: center;
+  justify-items: center; }
+  .prayer__content {
+    color: #fff;
+    font-size: 2.5rem; }
